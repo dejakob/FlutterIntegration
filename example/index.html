@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flutter test</title>
+    <script src="../flutter_integration.js"></script>
+</head>
+<body>
+    <h1>Flutter integration</h1>
+    <div id="status"></div>
+    <script>
+        FlutterIntegration.onLeft = function() {
+            document.getElementById('status').innerHTML = 'LEFT';
+        };
+        FlutterIntegration.onRight = function() {
+            document.getElementById('status').innerHTML = 'RIGHT';
+        };
+        FlutterIntegration.onHand = function() {
+            document.getElementById('status').innerHTML = 'HAND';
+        };
+        FlutterIntegration.connect();
+    </script>
+</body>
+</html>
